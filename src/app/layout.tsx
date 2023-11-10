@@ -2,6 +2,7 @@ import type {Metadata} from 'next'
 import {Inter} from 'next/font/google'
 import '../styles/globals.css'
 import {LocationContextProvider} from "@/context/LocationContext";
+import {APIContextProvider} from "@/context/APIContext";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -19,7 +20,9 @@ export default function RootLayout({
         <html lang="en">
         <body className={inter.className}>
         <LocationContextProvider>
-            {children}
+            <APIContextProvider>
+                {children}
+            </APIContextProvider>
         </LocationContextProvider>
         </body>
         </html>
