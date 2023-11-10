@@ -4,10 +4,6 @@
 name: Deploy to Firebase Hosting on PR
 'on': pull_request
 
-env:
-  NEXT_PUBLIC_WEATHER_API_KEY: '${{ secrets.NEXT_PUBLIC_WEATHER_API_KEY }}',
-  NEXT_PUBLIC_API_BASE_URL: '${{ secrets.NEXT_PUBLIC_API_BASE_URL }}',
-
 jobs:
   build_and_preview:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
@@ -15,6 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: npm ci && npm run build
+        with:
+          NEXT_PUBLIC_WEATHER_API_KEY: '${{ secrets.NEXT_PUBLIC_WEATHER_API_KEY }}',
+          NEXT_PUBLIC_API_BASE_URL: '${{ secrets.NEXT_PUBLIC_API_BASE_URL }}',
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
