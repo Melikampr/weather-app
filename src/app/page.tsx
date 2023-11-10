@@ -10,7 +10,6 @@ import HistoryDetails from "@/components/History/HistoryDetails";
 
 import useWeatherData from "@/hooks/useWeatherData";
 
-
 export default function Home() {
     // Fetch weather data and manage loading state using the custom hook
     const {isLoading, error} = useWeatherData();
