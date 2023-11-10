@@ -12,8 +12,8 @@ jobs:
       - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          NEXT_PUBLIC_WEATHER_API_KEY: '${{ secrets.NEXT_PUBLIC_WEATHER_API_KEY }}',
-          NEXT_PUBLIC_API_BASE_URL: '${{ secrets.NEXT_PUBLIC_API_BASE_URL }}',
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_WEATHER_APP_4B39F }}'
+          NEXT_PUBLIC_WEATHER_API_KEY: '${{ secrets.NEXT_PUBLIC_WEATHER_API_KEY }}',
+          NEXT_PUBLIC_API_BASE_URL: '${{ secrets.NEXT_PUBLIC_API_BASE_URL }}',
           projectId: weather-app-4b39f
