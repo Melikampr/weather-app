@@ -1,10 +1,14 @@
 "use client"
-import useWeatherData from "@/hooks/useWeatherData";
+
+import React from 'react'
+
 import DayDetails from "@/components/Today/DayDetails";
 import CurrentWeather from "@/components/CurrentWeather";
 import AstroData from "@/components/AstroData";
 import ForecastWeather from "@/components/Forecast/ForecastWeather";
 import HistoryDetails from "@/components/History/HistoryDetails";
+
+import useWeatherData from "@/hooks/useWeatherData";
 
 
 export default function Home() {
