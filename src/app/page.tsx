@@ -29,6 +29,7 @@ export default function Home() {
                                     <DayDetails/> {/* Component for displaying day weather forecast details */}
                                     <CurrentWeather/>{/* Component for displaying current weather details */}
                                 </div>
+                                <AstroData/> {/* Component for displaying astrological data */}
                             </div>
                         </div>
                         {/*<div*/}
