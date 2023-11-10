@@ -2,6 +2,8 @@
 import useWeatherData from "@/hooks/useWeatherData";
 import DayDetails from "@/components/Today/DayDetails";
 import CurrentWeather from "@/components/CurrentWeather";
+import AstroData from "@/components/AstroData";
+
 
 export default function Home() {
     // Fetch weather data and manage loading state using the custom hook
@@ -32,9 +34,9 @@ export default function Home() {
                                 <AstroData/> {/* Component for displaying astrological data */}
                             </div>
                         </div>
-                        {/*<div*/}
-                        {/*    className="flex flex-col md:flex-row md:justify-around lg:justify-between lg:flex-col gap-10 lg:gap-5 lg:w-2/5">*/}
-                        {/*</div>*/}
+                        <div
+                            className="flex flex-col md:flex-row md:justify-around lg:justify-between lg:flex-col gap-10 lg:gap-5 lg:w-2/5">
+                        </div>
                     </div>
                 </div>
             )}
