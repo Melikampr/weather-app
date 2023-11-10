@@ -2,6 +2,7 @@ import React from 'react';
 import {useHistoryData} from '@/hooks/useHistoryData';
 import HistoryChart from '@/components/History/HistoryChart';
 import {getChartData, sortHistoryData} from '@/utils/historyUtils';
+import {log} from "util";
 
 //Show last week data
 const HistoryDetails = () => {
