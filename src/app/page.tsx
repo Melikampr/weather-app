@@ -1,6 +1,7 @@
 "use client"
 import useWeatherData from "@/hooks/useWeatherData";
 import DayDetails from "@/components/Today/DayDetails";
+import CurrentWeather from "@/components/CurrentWeather";
 
 export default function Home() {
     // Fetch weather data and manage loading state using the custom hook
@@ -26,6 +27,7 @@ export default function Home() {
                                 <div
                                     className="flex flex-col-reverse sm:flex-row md:flex-row lg:flex-row gap-10 lg:gap-5 justify-between">
                                     <DayDetails/> {/* Component for displaying day weather forecast details */}
+                                    <CurrentWeather/>{/* Component for displaying current weather details */}
                                 </div>
                             </div>
                         </div>
