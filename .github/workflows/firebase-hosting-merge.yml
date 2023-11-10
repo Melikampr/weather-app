@@ -16,7 +16,8 @@ jobs:
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_WEATHER_APP_4B39F }}'
-          NEXT_PUBLIC_WEATHER_API_KEY: '${{ secrets.NEXT_PUBLIC_WEATHER_API_KEY }}',
-          NEXT_PUBLIC_API_BASE_URL: '${{ secrets.NEXT_PUBLIC_API_BASE_URL }}',
           channelId: live
           projectId: weather-app-4b39f
+        env:
+          NEXT_PUBLIC_WEATHER_API_KEY: '${{ secrets.NEXT_PUBLIC_WEATHER_API_KEY }}',
+          NEXT_PUBLIC_API_BASE_URL: '${{ secrets.NEXT_PUBLIC_API_BASE_URL }}',
