@@ -1,5 +1,6 @@
 "use client"
 import useWeatherData from "@/hooks/useWeatherData";
+import DayDetails from "@/components/Today/DayDetails";
 
 export default function Home() {
     // Fetch weather data and manage loading state using the custom hook
@@ -28,7 +29,12 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        )}
-                    </main>
-                    )
-                    }
+                        {/*<div*/}
+                        {/*    className="flex flex-col md:flex-row md:justify-around lg:justify-between lg:flex-col gap-10 lg:gap-5 lg:w-2/5">*/}
+                        {/*</div>*/}
+                    </div>
+                </div>
+            )}
+        </main>
+    )
+}
