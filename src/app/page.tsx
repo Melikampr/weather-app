@@ -3,6 +3,7 @@ import useWeatherData from "@/hooks/useWeatherData";
 import DayDetails from "@/components/Today/DayDetails";
 import CurrentWeather from "@/components/CurrentWeather";
 import AstroData from "@/components/AstroData";
+import ForecastWeather from "@/components/Forecast/ForecastWeather";
 
 
 export default function Home() {
@@ -36,6 +37,7 @@ export default function Home() {
                         </div>
                         <div
                             className="flex flex-col md:flex-row md:justify-around lg:justify-between lg:flex-col gap-10 lg:gap-5 lg:w-2/5">
+                            <ForecastWeather/> {/* Component for displaying weather forecast */}
                         </div>
                     </div>
                 </div>
