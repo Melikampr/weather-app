@@ -10,7 +10,7 @@ const AstroData = () => (
         {/* Grid for displaying astroArr data */}
         <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 justify-around gap-5">
             {astroArr.map((astro, index) => (
-                <div key={index} className="bg-light flex-col flex-wrap p-5 rounded-xl text-sm">
+                <div data-testid="astro-data" key={index} className="bg-light flex-col flex-wrap p-5 rounded-xl text-sm">
                     <div className="mb-3">{astro.name}</div>
                     <div>{astro.value}</div>
                 </div>
