@@ -50,14 +50,6 @@ https://api.weatherapi.com
 
 **Client:** React, Next, TailwindCSS
 
-## Running Tests
-
-To run tests, run the following command
-
-```bash
-  npm run test
-```
-
 
 ## Author
 
