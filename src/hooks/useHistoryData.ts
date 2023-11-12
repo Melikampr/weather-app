@@ -5,6 +5,7 @@ import {useSearchParams} from 'next/navigation';
 import {HistoryData} from '@/types/ForecastData';
 import {setDateArr} from '@/utils/historyUtils';
 import {useLocation} from "@/context/LocationContext";
+import axios from "axios";
 
 // Constants for the API key and base URL
 const API_KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
@@ -34,8 +35,8 @@ export function useHistoryData() {
                 for (const date of setDateArr()) {
                     try {
                         if (locationCoords) {
-                            const response = await fetch(`${API_BASE_URL}?key=${API_KEY}&q=${locationCoords[0]},${locationCoords[1]}&dt=${date}`);
-                            const data = await response.json();
+                            const response = await axios(`${API_BASE_URL}?key=${API_KEY}&q=${locationCoords[0]},${locationCoords[1]}&dt=${date}`);
+                            const data =  response.data;
                             tempWeekData.push(data);
                         }
                     } catch (error) {
