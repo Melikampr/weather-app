@@ -33,7 +33,7 @@ const HistoryChart: React.FC<{ data: ChartData[] }> = ({ data }) => (
                     <XAxis dataKey="date"/>
                     <YAxis/>
                     <Tooltip/>
-                    <Legend/>
+                    <Legend />
                     <Bar dataKey="minTemp" fill="#71c1e2"/>
                     <Bar dataKey="maxTemp" fill="#32a6d8"/>
                 </BarChart>

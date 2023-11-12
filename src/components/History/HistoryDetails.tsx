@@ -12,7 +12,7 @@ const HistoryDetails = () => {
     if (!weekData || weekData.length <= 5) {
         return (
             <div>
-                <span className="loading loading-lg loading-spinner text-white absolute left-1/2 -top-1/4"></span>
+                <span data-testid="history-loading" className="loading loading-lg loading-spinner text-white absolute left-1/2 -top-1/4"></span>
                 {error && (
                     <div className="alert alert-error fixed bottom-5 left-5 max-w-lg">
                         <span>{error}</span>

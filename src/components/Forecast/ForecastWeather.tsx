@@ -1,5 +1,4 @@
 import React from 'react';
-import {dayOfWeek, getForecastDate, setDate} from "@/utils/dateUtils";
 import {useAPI} from '@/context/APIContext';
 import {ForecastDay} from "@/types/ForecastData";
 import ForecastCard from "@/components/Forecast/ForecastCard";
@@ -17,7 +16,7 @@ const ForecastWeather = () => {
                 <div className="flex flex-col lg:flex-row lg:justify-between w-full gap-7 mb-0">
                     {/*Skip current day info as index 0*/}
                     {data.forecast.forecastday.slice(1).map((day: ForecastDay, index: number) => (
-                            <ForecastCard key={index} day={day} index={index} />
+                            <ForecastCard key={index} day={day} index={index}/>
                         )
                     )}
                 </div>

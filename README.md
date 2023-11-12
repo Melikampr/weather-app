@@ -35,6 +35,13 @@ Run the project
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  npm run test
+```
 
 ## Environment Variables
 
@@ -49,7 +56,6 @@ https://api.weatherapi.com
 ## Tech Stack
 
 **Client:** React, Next, TailwindCSS
-
 
 ## Author
 
