@@ -44,6 +44,7 @@ function useWeatherData() {
                         const response = await axios(`${API_BASE_URL}?key=${API_KEY}&q=${locationCoords[0]},${locationCoords[1]}&days=3&aqi=no&alerts=no`);
                         const data = response.data;
                         // Set astrological data using the utility function
+                        setData(data);
                         setAstroData(data);
                         setLoading(false);
                     }
