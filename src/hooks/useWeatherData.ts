@@ -6,6 +6,7 @@ import {setAstroData} from '@/utils/astroUtils';
 import {useAPI} from '@/context/APIContext';
 import {getLocation} from "@/utils/locationUtils";
 import {useLocation} from "@/context/LocationContext";
+import axios from 'axios';
 
 // Constants for the API key and base URL
 const API_KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
@@ -23,7 +24,6 @@ function useWeatherData() {
     // Extract the location query from the URL
     const searchParams = useSearchParams();
     const locationQuery = searchParams.get('q');
-
     // Fetch and update data when locationCoords change
     useEffect(() => {
         const fetchData = async () => {
@@ -41,10 +41,8 @@ function useWeatherData() {
                 try {
                     if (locationCoords) {
                         // Fetch weather data from the API
-                        const response = await fetch(`${API_BASE_URL}?key=${API_KEY}&q=${locationCoords[0]},${locationCoords[1]}&days=3&aqi=no&alerts=no`);
-                        const data = await response.json();
-                        setData(data);
-
+                        const response = await axios(`${API_BASE_URL}?key=${API_KEY}&q=${locationCoords[0]},${locationCoords[1]}&days=3&aqi=no&alerts=no`);
+                        const data = response.data;
                         // Set astrological data using the utility function
                         setAstroData(data);
                         setLoading(false);
