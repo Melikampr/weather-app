@@ -1,4 +1,10 @@
-
+</p>
+  <p align="center">
+    <a href="https://github.com/melikampr/weather-app/actions">
+      <img alt="Tests Passing" src="https://github.com/anuraghazra/github-readme-stats/workflows/Test/badge.svg" />
+    </a>
+  </p>
+  
 # Weather App
 
 This Next.js application, built with TypeScript, provides real-time weather information based on user location.
